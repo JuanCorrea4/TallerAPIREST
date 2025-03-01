@@ -22,8 +22,8 @@ public class CoursesService {
             return coursesRepository.findAll();
         } catch (Exception e) {
             // Loguear la excepción
-            System.out.println("Error al obtener los cursos: " + e.getMessage());
-            throw new RuntimeException("Error al obtener los cursos", e);
+            System.out.println("Error getting courses: " + e.getMessage());
+            throw new RuntimeException("Error getting courses", e);
         }
     }
 
@@ -34,8 +34,8 @@ public class CoursesService {
             return coursesRepository.save(course);
         } catch (Exception e) {
             // Loguear la excepción
-            System.out.println("Error al guardar el curso: " + e.getMessage());
-            throw new RuntimeException("Error al guardar el curso", e);
+            System.out.println("Error saving course: " + e.getMessage());
+            throw new RuntimeException("Error saving course", e);
         }
     }
 
@@ -46,8 +46,8 @@ public class CoursesService {
             coursesRepository.deleteById(id);
         } catch (Exception e) {
             // Loguear la excepción
-            System.out.println("Error al eliminar el curso: " + e.getMessage());
-            throw new RuntimeException("Error al eliminar el curso", e);
+            System.out.println("Error deleting course: " + e.getMessage());
+            throw new RuntimeException("Error deleting course", e);
         }
     }
 }

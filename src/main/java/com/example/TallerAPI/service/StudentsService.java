@@ -19,8 +19,8 @@ public class StudentsService {
             return studentsRespository.findAll();
         } catch (Exception e) {
             // Loguear la excepción
-            System.out.println("Error al obtener los estudiantes: " + e.getMessage());
-            throw new RuntimeException("Error al obtener los estudiantes", e);
+            System.out.println("Error getting students: " + e.getMessage());
+            throw new RuntimeException("Error getting students", e);
         }
     }
 
@@ -30,8 +30,8 @@ public class StudentsService {
             return studentsRespository.save(student);
         } catch (Exception e) {
             // Loguear la excepción
-            System.out.println("Error al guardar el estudiante: " + e.getMessage());
-            throw new RuntimeException("Error al guardar el estudiante", e);
+            System.out.println("Error saving student: " + e.getMessage());
+            throw new RuntimeException("Error saving student", e);
         }
     }
 
@@ -41,8 +41,8 @@ public class StudentsService {
             studentsRespository.deleteById(id);
         } catch (Exception e) {
             // Loguear la excepción
-            System.out.println("Error al eliminar el estudiante: " + e.getMessage());
-            throw new RuntimeException("Error al eliminar el estudiante", e);
+            System.out.println("Error deleting student: " + e.getMessage());
+            throw new RuntimeException("Error deleting student", e);
         }
     }
 }

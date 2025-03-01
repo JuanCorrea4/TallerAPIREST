@@ -3,11 +3,13 @@ package com.example.TallerAPI.models;
 import jakarta.persistence.*;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "students")
 public class Student {
 
-    @Id
+    @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -18,6 +20,7 @@ public class Student {
     private String email;
 
     @ManyToMany(mappedBy = "students")
+    @JsonIgnore
     private List<Course> courses;
 
     // Getters y Setters

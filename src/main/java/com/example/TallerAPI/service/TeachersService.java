@@ -19,8 +19,8 @@ public class TeachersService {
             return teacherRepository.findAll();
         } catch (Exception e) {
             // Loguear la excepción
-            System.out.println("Error al obtener los profesores: " + e.getMessage());
-            throw new RuntimeException("Error al obtener los profesores", e);
+            System.out.println("Error getting teachers: " + e.getMessage());
+            throw new RuntimeException("Error getting teachers", e);
         }
     }
 
@@ -30,8 +30,8 @@ public class TeachersService {
             return teacherRepository.save(teacher);
         } catch (Exception e) {
             // Loguear la excepción
-            System.out.println("Error al guardar el profesor: " + e.getMessage());
-            throw new RuntimeException("Error al guardar el profesor", e);
+            System.out.println("Error saving teacher: " + e.getMessage());
+            throw new RuntimeException("Error saving teacher", e);
         }
     }
 
@@ -41,8 +41,8 @@ public class TeachersService {
             teacherRepository.deleteById(id);
         } catch (Exception e) {
             // Loguear la excepción
-            System.out.println("Error al eliminar el profesor: " + e.getMessage());
-            throw new RuntimeException("Error al eliminar el profesor", e);
+            System.out.println("Error deleting teacher: " + e.getMessage());
+            throw new RuntimeException("Error deleting teacher", e);
         }
     }   
 }
